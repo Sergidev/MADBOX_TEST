@@ -47,15 +47,15 @@ public class PlayerMovement : MonoBehaviour
     {
         Follower.transform.rotation = Quaternion.Lerp(Follower.transform.rotation, Yrot.rotation, Time.deltaTime * 2);
 
-        /*if (Input.touchCount > 0)
-            Speed = 1f;
-        else
-            Speed = 0;*/
-
-        if (Touch)
+        if (Input.GetMouseButton(0))
             Speed = 1f;
         else
             Speed = 0;
+
+        /*if (Touch)
+            Speed = 1f;
+        else
+            Speed = 0;*/
 
         if (GoRoute && !Finished)
         {
